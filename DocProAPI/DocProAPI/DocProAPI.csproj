@@ -45,7 +45,31 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CanBQ, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CanBQ.dll</HintPath>
+    </Reference>
+    <Reference Include="DocProLogic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DocProLogic.dll</HintPath>
+    </Reference>
+    <Reference Include="DocProModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DocProModel.dll</HintPath>
+    </Reference>
+    <Reference Include="DocProSearch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DocProSearch.dll</HintPath>
+    </Reference>
+    <Reference Include="DocProUtil, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DocProUtil.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PetaPoco, Version=5.0.1.23315, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\PetaPoco.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -155,12 +179,41 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SapHrConnectController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Customs\Constants\DocProAPIContants.cs" />
+    <Compile Include="Customs\CUtils\CUtils.cs" />
+    <Compile Include="Customs\Enum\Enum.cs" />
+    <Compile Include="Customs\FillterRequest\DebuggingFilter.cs" />
+    <Compile Include="Customs\FillterRequest\ValidateHelper\ValidateHelper.cs" />
+    <Compile Include="Customs\Helper\CheckInvalidHelper.cs" />
+    <Compile Include="Customs\Helper\SendMailHelper.cs" />
+    <Compile Include="Customs\Param\AppointmentParam.cs" />
+    <Compile Include="Customs\Param\ContactParam.cs" />
+    <Compile Include="Customs\Param\CustomerParam.cs" />
+    <Compile Include="Customs\Param\VanBanDiParam.cs" />
+    <Compile Include="Customs\Queue\FCMPushNotification.cs" />
+    <Compile Include="Customs\Queue\QueueHelper.cs" />
+    <Compile Include="Customs\ValidateHelper\ValidateHelper.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DocProQLKHDataContext.cs" />
+    <Compile Include="Models\DocProQLVBDataContext.cs" />
+    <Compile Include="Models\QLKH\Appointment.cs" />
+    <Compile Include="Models\QLKH\AppointmentContact.cs" />
+    <Compile Include="Models\QLKH\Contact.cs" />
+    <Compile Include="Models\QLKH\Customer.cs" />
+    <Compile Include="Models\QLVB\SoVanBan.cs" />
+    <Compile Include="Models\QLVB\VanBanDi.cs" />
+    <Compile Include="Models\QLVB\VanBanDiDinhKem.cs" />
+    <Compile Include="Models\QLVB\VanBanDiLienQuan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\SoVanBanRepository.cs" />
+    <Compile Include="Repository\UserFavoriteRepository.cs" />
+    <Compile Include="Repository\VanBanDiRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -221,7 +274,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Customs\Entities\" />
+    <Folder Include="Customs\Service\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

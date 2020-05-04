@@ -4,3 +4,8 @@
 
 /.vs
 /DocProAPI/.vs/DocProAPI
+/DocProAPI/DocProAPI/Controllers/SapHrConnectController.cs
+/DocProAPI/DocProAPI/Models/QLVB
+/DocProAPI/DocProAPI/Models/DocProQLVBDataContext.cs
+/DocProAPI/DocProAPI/Repository/VanBanDiRepository.cs
+/DocProAPI/DocProAPI/Repository/SoVanBanRepository.cs
